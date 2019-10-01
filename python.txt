@@ -1,0 +1,54 @@
+<ex.1>
+Salary_raise_Factor = 0.05
+State_Code_Map = {'WA' : 'Washington' , 'TX' : 'Texas'}
+
+def  update_employee_record(rec):
+    old_sal = rec['salary']
+    new_sal = old_sal * (1 + Salary_raise_Factor)
+    rec['salary'] = new_sal
+    state_code = rec['state_code']
+    rec['state_name'] = State_Code_Map[state_code]
+    
+input_data = [
+    {'employee_name': 'Susan' , 'salary': 1000.0 , 'state_code':'WA'},
+    {'employee_name': 'Park' , 'salary': 2000.0 , 'state_code':'TX'}
+    ]
+    
+
+for rec in input_data:
+	update_employee_record(rec)
+	name = rec['employee_name']
+	salary = rec['salary']
+	state = rec['state_code']
+	print(name + " now lives in " +state)
+
+
+
+<ex.2>
+my_true_bool = True
+my_false_bool = False
+this_is_true = (0<100)
+this_is_false = (0>100)
+print(this_is_true)
+print(this_is_false)
+print(my_false_bool)
+
+
+<String ex.3>
+a_string = 'hello'     # \n: °³Çà , \t: ÅÇ
+b_string = "hello's"
+print(a_string ,b_string)
+multi_string = """line1
+line2"""
+print(multi_string)
+multi_string = """hi there
+hey sup up
+just wanna know"""
+print(multi_string)
+
+
+new_String = "abcd"
+print(new_String[:3])  # every index in python starts from '0' (not '1')
+print(new_String[1:3])
+print(new_String[0:])
+
